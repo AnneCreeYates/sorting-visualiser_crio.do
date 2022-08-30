@@ -7,6 +7,7 @@
         
         <!--think about the general design - maybe the responsivenes is pointless in this case. If so, remove the meta below-->
         <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <link rel = "stylesheet" href = "css/styles.css">
         <title>Algorithm Sorting Visualiser</title>
     </head>
     <body>
@@ -15,13 +16,16 @@
             <p>Instructions: Click the button to see visialisation of chosen sorting algorithm.</p>
         </header>
 
-        <button name = "button">Bubble Sort</button>
-        <button name = "button">Selection Sort</button>
-        <button name = "button">Insertion Sort</button>
-        <button name = "button">Quick Sort</button>
-        <button name = "button">Merge Sort</button>
+        <button name = "button" class = "button" id = "new-arr-btn">New Array</button>
+        <br><br>
 
-
-
+        <button name = "button" class = "button" id = "bubble-btn">Bubble Sort</button>
+        <button name = "button" class = "button" id = "selection-btn">Selection Sort</button>
+        <button name = "button" class = "button" id = "insetsion-btn">Insertion Sort</button>
+        <button name = "button" class = "button" id = "quick-btn">Quick Sort</button>
+        <button name = "button" class = "button" id = "merge-btn">Merge Sort</button>
+        
+        
     </body>
+    <script src = "js/main.js"></script>
 </html>
