@@ -18,3 +18,40 @@ h1 {
     color:rgb(232, 232, 240);
     font-family: 'Montserrat', sans-serif;
   }
+
+  .main-nav {
+    display: grid;
+    padding: 2em;;
+    /* justify-content:center; */
+    
+  }
+
+
+
+  .button {
+    width: 9em;
+    height: 9em;
+    /* padding: 0.9em; */
+    margin: 1.5em 0;
+    border-radius: 10%;
+    transform:rotate(-45deg);
+    /* background: -webkit-linear-gradient(90deg, #420980 0%, rgb(10, 47, 139) 50%, #2750a4 100%); */
+    /*2 lines below clip the gradient to cover the text insead of the background*/
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    color: rgb(67, 67, 107);
+    text-shadow: 0.07em 0.03em #f8f7faa7;
+    border-color: rgb(232, 232, 240);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    background-color: rgba(193, 193, 196, 0.251);
+    
+    
+  }
+
+  #new-arr-btn {
+    margin: 1em 0 7em;
+    /* padding: 4em; */
+    
+    
+  }
