@@ -26,8 +26,6 @@ h1 {
     
   }
 
-
-
   .button {
     width: 9em;
     height: 9em;
@@ -45,13 +43,16 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9em;
     background-color: rgba(193, 193, 196, 0.251);
-    
+  
     
   }
 
   #new-arr-btn {
     margin: 1em 0 7em;
     /* padding: 4em; */
-    
-    
+  }
+
+  .bar-style {
+    color: white;
+    font-size: 3em;
   }
