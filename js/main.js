@@ -6,21 +6,22 @@ for (let i = 0; i < 101; i++) {
     arrayForSorting.push(Math.floor(Math.random() * 101));
 }
 
-
 //integers should be the height of bars
 const barHeight = arrayForSorting;
 
-//create 100 div elements --at the moment only 1 element is created, which contains a string of 100 numbers
-document.body.onload = addElement;
+//create 100 div elements 
+document.body.onload = bars;
 
-function addElement () {
+
+//the function creates 100 divs, adds new divs to DOM, adds bar-style class to each div
+function bars () {
     //create a loop to make 100 divs
     for (let i = 0; i < arrayForSorting.length; i++) {
     
-    //create  a new div element
+    //create a new div element for each iteration
     const newDiv = document.createElement("div");
 
-    //give it content (most likely in this case it will have to be a loop throufh the array?)
+    //give each div content
     const newElement = document.createTextNode(arrayForSorting[i]);
 
     //add the text node to the newly created div
@@ -29,10 +30,18 @@ function addElement () {
     //add the new div and its content to DOM
     const currentDiv = document.getElementById("bar-components");
 
-    //line below is supposed to add class name to each div -- doesn't work yet
-    newDiv.classList.add("bar-style");
+    //width od the div is to be determined by the array value -- style doesn't work yet though
+    currentDiv.style.width = arrayForSorting[i];
 
+
+    //line below adds class name to each div
+    newDiv.classList.add("bar-style");
+    
+    //inserts the new divs -- bar-style class -- in front of the bar-component div --- may need to figure out how to make the dynamic divs go inside the bar-components div
     document.body.insertBefore(newDiv, currentDiv);
-    } 
-        
+    
+
+
+    }        
 }
+
