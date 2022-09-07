@@ -15,6 +15,9 @@ document.body.onload = bars;
 
 //the function creates 100 divs, adds new divs to DOM, adds bar-style class to each div
 function bars () {
+    //add the new div and its content to DOM
+    const currentDiv = document.getElementById("bar-components");
+
     //create a loop to make 100 divs
     for (let i = 0; i < arrayForSorting.length; i++) {
     
@@ -27,20 +30,14 @@ function bars () {
     //add the text node to the newly created div
     newDiv.appendChild(newElement);
 
-    //add the new div and its content to DOM
-    const currentDiv = document.getElementById("bar-components");
-
-    //width od the div is to be determined by the array value -- style doesn't work yet though
-    currentDiv.style.width = arrayForSorting[i];
-
+    //width od the div is to be determined by the array value
+    newDiv.style.width = arrayForSorting[i] + '%';
 
     //line below adds class name to each div
     newDiv.classList.add("bar-style");
     
     //inserts the new divs -- bar-style class -- in front of the bar-component div --- may need to figure out how to make the dynamic divs go inside the bar-components div
     document.body.insertBefore(newDiv, currentDiv);
-    
-
 
     }        
 }

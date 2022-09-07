@@ -23,7 +23,7 @@ h1 {
     display: grid;
     padding: 2em;;
     /* justify-content:center; */
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(6 1fr);
     grid-template-rows: repeat(2,1fr);
     grid-template-areas: 
       "button1 button1 button1 button1 button1"
@@ -83,7 +83,7 @@ h1 {
   }
 
   .bar-style {
-    color: transparent;
+    /* color: transparent; */
     /* font-size: 1em; */
     background-color: yellow;
     border:rgb(10, 47, 139) solid 1px;
