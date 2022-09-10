@@ -21,31 +21,31 @@ function bars () {
     //create a loop to make 100 divs
     for (let j = 0; j < arrayForSorting.length; j++) {
     
-    //create a new div element for each iteration
-    const newDiv = document.createElement("div");
+        //create a new div element for each iteration
+        const newDiv = document.createElement("div");
 
-    //give each div content -- prints put the numbers from the array one next to the other -- works without it
-    // const newElement = document.createTextNode(arrayForSorting[j]);
+        //give each div content -- prints put the numbers from the array one next to the other -- works without it
+        // const newElement = document.createTextNode(arrayForSorting[j]);
 
-    //add the text node to the newly created div
-    // newDiv.appendChild(newElement);
+        //add the text node to the newly created div
+        // newDiv.appendChild(newElement);
 
-    currentDiv.appendChild(newDiv);
+        currentDiv.appendChild(newDiv);
 
-    //width of the div is to be determined by the array value
-    newDiv.style.width = arrayForSorting[j] + '%';
-
-
-    //line below adds class name to each div --- when added to the currentDiv it work on the general container not the elements
-    //adding to newDiv adds the style to the elements
-    newDiv.classList.add("bar-style");
-    
-    //inserts the new divs in front of the bar-component div 
-    //--- may need to figure out how to make the dynamic divs go inside the bar-components div
-    // document.body.insertBefore(newDiv, currentDiv);
+        //width of the div is to be determined by the array value
+        newDiv.style.height = arrayForSorting[j] + '%';
 
 
-    /*when lines 31 and 34 and 37 are changed to currentDiv a line of numbers appears in a row -- experiment with that */
+        //line below adds class name to each div --- when added to the currentDiv it work on the general container not the elements
+        //adding to newDiv adds the style to the elements
+        newDiv.classList.add("bar-style");
+        
+        //inserts the new divs in front of the bar-component div 
+        //--- may need to figure out how to make the dynamic divs go inside the bar-components div
+        // document.body.insertBefore(newDiv, currentDiv);
+
+
+        /*when lines 31 and 34 and 37 are changed to currentDiv a line of numbers appears in a row -- experiment with that */
 
     }        
 }
