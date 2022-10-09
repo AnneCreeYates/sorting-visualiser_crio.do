@@ -98,12 +98,12 @@ h1 {
   }
 
   .button {
-    width: 6em;
-    height: 6em;
+    width: 3em;
+    height: 3em;
     /* padding: 0.9em; */
     margin: 1.5em 0;
     border-radius: 10%;
-    transform:rotate(-45deg);
+    /* transform:rotate(-45deg); */
     
     /* background: -webkit-linear-gradient(90deg, #420980 0%, rgb(10, 47, 139) 50%, #2750a4 100%); */
     /*2 lines below clip the gradient to cover the text insead of the background*/
