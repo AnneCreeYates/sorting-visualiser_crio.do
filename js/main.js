@@ -11,7 +11,7 @@ const newArrButton = document.getElementById("new-arr-btn");
 // const arrayForSorting = [];
     
 //add the new div and its content to DOM
-const currentDiv = document.getElementById("bar-components");
+let currentDiv = document.getElementById("bar-components");
 
 //pushes 100 random numbers to the aarrayForSorting - works here better than up top
 // for (let i = 0; i < 101; i++) {
@@ -23,7 +23,7 @@ const currentDiv = document.getElementById("bar-components");
 //also adds identical one instead of random
 
 // newArrButton.addEventListener("click", bars);
-newArrButton.addEventListener("click", removingBars);
+newArrButton.addEventListener("click", bars);
 
 //function adding new random bars
 
@@ -54,7 +54,7 @@ function removingBars (){
 
         // const newDiv = document.getElementsByClassName("bar-style");
 
-        //successfuly removes the entire section
+        //successfuly removes the entire section, but it seems to be permanent
         currentDiv.remove();
 
         
@@ -82,12 +82,12 @@ function removingBars (){
 
 //the function creates 100 divs, adds new divs to DOM, adds bar-style class to each div
 function bars () {
+    
 
-        
     // //create an array and push 100 numbers
     const arrayForSorting = [];
     
-    // //add the new div and its content to DOM
+    //add the new div and its content to DOM
     // const currentDiv = document.getElementById("bar-components");
     
     // //pushes 100 random numbers to the aarrayForSorting - works here better than up top
@@ -107,12 +107,20 @@ function bars () {
         //add the text node to the newly created div
         currentDiv.appendChild(newDiv);
 
+
+        const anotherNewDiv = document.createElement("div");
+
         //height of the div is to be determined by the array value
         newDiv.style.height = arrayForSorting[j] + '%';
 
         //line below adds class name to each div
         newDiv.classList.add("bar-style");
 
+        
+
+        newDiv.replaceWith(anotherNewDiv);
+
+        
     }
 
    
@@ -126,3 +134,4 @@ function bars () {
 
 //initiates the function on load
 bars();
+
