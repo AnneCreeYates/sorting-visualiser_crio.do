@@ -1,11 +1,6 @@
 
-//create an event listener for the new array, so there is no need for reloading the page every time
 const newArrButton = document.getElementById("new-arr-btn");
-
-//add the new div and its content to DOM
 let parentDiv = document.getElementById("bar-components");
-
-// newArrButton.addEventListener("click", bars);
 newArrButton.addEventListener("click", generateBars);
 
 function generateBars(){
@@ -23,10 +18,14 @@ function clearBars() {
 
 function generateRandomArray(length) {
     const array = [];
+    const randomIndexes = [];
+
     for (let i = 0; i < length; i++) {
-        array.push(Math.floor(Math.random() * 101));
+        array.push(i);
+        randomIndexes.push(Math.random());
     }
-    return array;
+    return array.sort((a, b) => randomIndexes[a] - randomIndexes[b]).map((value) => value + 1);
+
 }
     
 function createBars(array) {
@@ -46,6 +45,4 @@ function createBars(array) {
     }
 };
 
-//initiates the function on load
 generateBars();
-

@@ -24,7 +24,7 @@ img, picture, video, canvas, svg {
   max-width: 100%;
 }
 
-input, button, textare, select {
+input, button, textarea, select {
   font: inherit;
 }
 
